@@ -4,6 +4,8 @@
 
 10 years of earthquakes / 2010-01-01 to 2019-12-31 / 1356502 events / depth exaggerated by a factor of 6
 
+This repository documents how the video was made and enables its reproduction.
+
 ## Open Data
 
 - earthquakes: United States Geological Survey (USGS)
