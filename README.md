@@ -1,6 +1,6 @@
 # Earthquakes / Erdbeben 2010-2019
 
-[![Watch the video](https://img.youtube.com/vi/RLHM5MQ5kAs/maxresdefault.jpg)](https://youtu.be/RLHM5MQ5kAs)
+[![Watch the video](https://img.youtube.com/vi/RLHM5MQ5kAs/hqdefault.jpg)](https://youtu.be/RLHM5MQ5kAs)
 
 10 years of earthquakes / 2010-01-01 to 2019-12-31 / 1356502 events / depth exaggerated by a factor of 6
 
