@@ -11,7 +11,7 @@ This repository documents how the video was made and enables its reproduction.
 - earthquakes: United States Geological Survey (USGS)
 - contours: Copyright © OpenStreetMap contributors / Open Database License 1.0
 
-# Open Source Software
+## Open Source Software
 
 - pycairo: 2D rendering
 - custom ray-tracer: 3D to 2D
