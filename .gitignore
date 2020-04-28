@@ -1,2 +1,6 @@
 *.pyc
 __*__/
+env*/
+data_*/
+frames/
+*.mp4
