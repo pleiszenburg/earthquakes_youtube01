@@ -1,0 +1,6 @@
+numpy
+numba
+pycairo
+requests
+tqdm
+zarr
