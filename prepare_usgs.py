@@ -39,7 +39,8 @@ from lib.usgs import fetch_usgs, reencode_usgs
 
 def run():
 
-    os.mkdir('data_usgs')
+    if not os.path.exists('data_usgs'):
+        os.mkdir('data_usgs')
     fetch_usgs('data_usgs', (2010, 1, 1), (2020, 1, 1))
     reencode_usgs('data_usgs', 'data_usgs.zarr')
 

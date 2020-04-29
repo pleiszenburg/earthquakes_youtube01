@@ -30,6 +30,7 @@ specific language governing rights and limitations under the License.
 
 import datetime
 import os
+import random
 import re
 
 import requests
@@ -45,13 +46,18 @@ from numcodecs import Blosc
 def fetch_usgs(fld, a, b):
 
     for d1, d2 in _date_interval_range(a, b):
-
+        dst = os.path.join(fld, f'{d1[0]:04d}-{d1[1]:02d}-{d1[2]:02d}.csv')
+        if os.path.exists(dst):
+            print("skip " + dst)
+            continue
         r = requests.get(
             'https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&'
             f'starttime={d1[0]:04d}-{d1[1]:02d}-{d1[2]:02d}&endtime={d2[0]:04d}-{d2[1]:02d}-{d2[2]:02d}'
         )
-        with open(os.path.join(fld, f'{d1[0]:04d}-{d1[1]:02d}-{d1[2]:02d}.csv'), 'w', encoding = 'utf-8') as f:
+        tmp = dst + '-{:08d}'.format(random.randint(0, 9999999))
+        with open(tmp, 'w', encoding = 'utf-8') as f:
             f.write(r.text)
+        os.rename(tmp, dst)
 
 def reencode_usgs(src_fld, target):
 
